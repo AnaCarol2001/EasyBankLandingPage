@@ -3,6 +3,7 @@ import Features from "../components/Features";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import GlobalStyle, { gridContainerStyle } from "../global-styles";
+import ArticleSection from "../components/ArticlesSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <MainStyled>
         <Hero />
         <Features />
+        <ArticleSection />
       </MainStyled>
     </>
   );
