@@ -26,13 +26,10 @@ export const HeaderStyled = styled.header`
 
 export const NavStyled = styled.nav`
   @media (max-width: 768px) {
-    position: absolute;
-    top: 4.2rem;
-    left: 0;
-    right: 0;
-    height: 100svh;
+    position: fixed;
+    inset: 4.2rem 0 0 0;
     margin-inline: auto;
-    background-color: #00000054;
+    background: linear-gradient(${PRIMARY_COLORS.darkBlue}, rgba(0, 0, 0, 0.1));
   }
 `;
 

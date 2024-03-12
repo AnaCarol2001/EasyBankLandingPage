@@ -1,8 +1,9 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import { ActionBtnStyled } from "../../global-styles";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import logoImg from "../../assets/images/logo.svg";
-
+import { motion } from "framer-motion";
 import {
   HeaderStyled,
   NavUlStyled,
@@ -19,7 +20,7 @@ export default function Navbar() {
         <div className="wrapper">
           <img src={logoImg} alt="Easybank" />
           <div className="nav-container">
-            {isOpen && <Navigation />}
+            <Navigation isMenuOpen={isOpen} />
             <MenuBtnStyled
               type="button"
               title={isOpen ? "Close" : "Menu"}
@@ -41,33 +42,80 @@ export default function Navbar() {
     <HeaderStyled>
       <div className="wrapper">
         <img src={logoImg} alt="Easybank" />
-        <Navigation />
+        <Navigation isMenuOpen={true} />
         <ActionBtnStyled type="button">Request Invite</ActionBtnStyled>
       </div>
     </HeaderStyled>
   );
 }
 
-const Navigation = () => {
+const variants = {
+  open: {
+    opacity: 1,
+    display: "block",
+    transition: { duration: 0.4 },
+  },
+  closed: {
+    opacity: 0,
+    transition: { duration: 0.3 },
+    transitionEnd: { display: "none" },
+  },
+};
+
+const ulVariants = {
+  open: {
+    x: "0%",
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.07,
+      delayChildren: 0.2,
+    },
+  },
+  closed: {
+    x: "100%",
+    transition: { duration: 0.3, staggerChildren: 0.07 },
+  },
+};
+
+const liVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+  },
+  closed: {
+    y: -15,
+    opacity: 0,
+  },
+};
+
+const Navigation = ({ isMenuOpen }) => {
   return (
-    <NavStyled>
-      <NavUlStyled>
-        <li>
+    <NavStyled
+      as={motion.nav}
+      animate={isMenuOpen ? "open" : "closed"}
+      variants={variants}
+    >
+      <NavUlStyled as={motion.ul} variants={ulVariants}>
+        <motion.li variants={liVariants}>
           <a href="#">Home</a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={liVariants}>
           <a href="#">About</a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={liVariants}>
           <a href="#">Contact</a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={liVariants}>
           <a href="#">Blog</a>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={liVariants}>
           <a href="#">Careers</a>
-        </li>
+        </motion.li>
       </NavUlStyled>
     </NavStyled>
   );
+};
+
+Navigation.propTypes = {
+  isMenuOpen: PropTypes.bool,
 };
