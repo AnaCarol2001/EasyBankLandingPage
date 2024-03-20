@@ -14,7 +14,7 @@ export const NEUTRAL_COLORS = {
 };
 
 export const LINEAR_GRADIENTS = {
-  greenBlue: `linear-gradient(90deg, ${PRIMARY_COLORS.limeGreen}, ${PRIMARY_COLORS.brightCyan})`,
+  greenBlue: `linear-gradient(90deg, ${PRIMARY_COLORS.brightCyan}, ${PRIMARY_COLORS.limeGreen}, ${PRIMARY_COLORS.brightCyan})`,
 };
 
 // Reset from https://piccalil.li/blog/a-more-modern-css-reset/
@@ -115,7 +115,14 @@ export const ActionBtnStyled = styled.button`
   padding: 0.8rem 1.8rem;
   border-radius: 2em;
   background: ${LINEAR_GRADIENTS.greenBlue};
+  background-size: 200%;
+  background-position: right;
   color: white;
+  transition: background-position linear 500ms;
+
+  &:is(:hover, :focus) {
+    background-position: left;
+  }
 
   &:active {
     opacity: 0.5;
