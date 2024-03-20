@@ -29,6 +29,7 @@ export const ArticlesItemsContainer = styled.div`
 `;
 
 export const ArticleStyled = styled.article`
+  display: inline-block;
   background-color: ${NEUTRAL_COLORS.white};
   border-radius: 0.3em;
   max-width: 20rem;
