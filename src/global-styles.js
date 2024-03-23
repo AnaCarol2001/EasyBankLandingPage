@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 // Colors
 export const PRIMARY_COLORS = {
@@ -107,27 +107,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
-
-export const ActionBtnStyled = styled.button`
-  font-size: 0.875rem;
-  font-weight: 900;
-  border: none;
-  padding: 0.8rem 1.8rem;
-  border-radius: 2em;
-  background: ${LINEAR_GRADIENTS.greenBlue};
-  background-size: 200%;
-  background-position: right;
-  color: white;
-  transition: background-position linear 500ms;
-
-  &:is(:hover, :focus) {
-    background-position: left;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-`;
 
 export const gridContainerStyle = css`
   --max-content-width: 1035px;
