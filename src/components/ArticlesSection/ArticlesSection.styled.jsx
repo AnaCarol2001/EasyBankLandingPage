@@ -1,5 +1,5 @@
+import { NEUTRAL_COLORS, PRIMARY_COLORS } from "src/global-styles";
 import styled from "styled-components";
-import { NEUTRAL_COLORS, PRIMARY_COLORS } from "../../global-styles";
 
 export const ArticleSectionStyled = styled.section`
   padding-block: 5rem;

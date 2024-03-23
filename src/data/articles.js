@@ -1,7 +1,7 @@
-import currencyImg from "../assets/images/image-currency.jpg";
-import restaurantImg from "../assets/images/image-restaurant.jpg";
-import planeImg from "../assets/images/image-plane.jpg";
-import confettiImg from "../assets/images/image-confetti.jpg";
+import currencyImg from "src/assets/images/image-currency.jpg";
+import restaurantImg from "src/assets/images/image-restaurant.jpg";
+import planeImg from "src/assets/images/image-plane.jpg";
+import confettiImg from "src/assets/images/image-confetti.jpg";
 
 export const articlesData = [
   {
