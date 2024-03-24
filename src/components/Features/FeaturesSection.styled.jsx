@@ -1,5 +1,5 @@
+import { NEUTRAL_COLORS, gridContainerStyle } from "src/global-styles";
 import styled from "styled-components";
-import { NEUTRAL_COLORS, gridContainerStyle } from "../../global-styles";
 
 export const FeaturesSectionStyled = styled.section`
   grid-column: full-width !important;

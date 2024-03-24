@@ -1,7 +1,7 @@
-import onlineIcon from "../assets/icons/icon-online.svg";
-import budgetingIcon from "../assets/icons/icon-budgeting.svg";
-import onboardingIcon from "../assets/icons/icon-onboarding.svg";
-import apiIcon from "../assets/icons/icon-api.svg";
+import onlineIcon from "src/assets/icons/icon-online.svg";
+import budgetingIcon from "src/assets/icons/icon-budgeting.svg";
+import onboardingIcon from "src/assets/icons/icon-onboarding.svg";
+import apiIcon from "src/assets/icons/icon-api.svg";
 
 export const featuresData = [
   {
