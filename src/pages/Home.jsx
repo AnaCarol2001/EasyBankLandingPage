@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Features from "../components/Features";
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
-import GlobalStyle, { gridContainerStyle } from "../global-styles";
-import ArticleSection from "../components/ArticlesSection";
-import Footer from "../components/Footer/Footer";
+import ArticleSection from "src/components/ArticlesSection";
+import Features from "src/components/Features";
+import Footer from "src/components/Footer";
+import Hero from "src/components/Hero";
+import Navbar from "src/components/Navbar";
+import GlobalStyle, { gridContainerStyle } from "src/global-styles";
 
 export default function Home() {
   return (
