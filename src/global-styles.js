@@ -1,6 +1,16 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-// Colors
+// Clamp values calculated using https://utopia.fyi/space/calculator from width 375px to 1440px
+export const FontSizes = {
+  700: "clamp(2.1875rem, 1.8125rem + 1.875vi, 3.5rem);",
+  600: "clamp(2rem, 1.868rem + 0.5634vi, 2.375rem);",
+  500: "clamp(1.25rem, 1.206rem + 0.1878vi, 1.375rem);",
+  400: "clamp(0.875rem, 0.787rem + 0.3756vi, 1.125rem);",
+  300: "1rem;",
+  200: "0.875rem;",
+  100: "0.625rem",
+};
+
 export const PRIMARY_COLORS = {
   darkBlue: "hsl(233, 26%, 24%)",
   limeGreen: "hsl(136, 65%, 51%)",
@@ -30,26 +40,19 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
     }
 
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-
     body {
       min-height: 100vh;
       line-height: 1.5;
       font-family: "Public Sans", sans-serif;
       font-weight: 400;
       background-color: ${NEUTRAL_COLORS.lightGray};
+      color: ${NEUTRAL_COLORS.grayBlue};
     }
 
     h1, h2, h3,
     button{
       line-height: 1.1;
     }
-
 
     h1, h2,
     h3 {
@@ -61,64 +64,20 @@ const GlobalStyle = createGlobalStyle`
       color: currentColor;
     }
 
-
     img {
       max-width: 100%;
       display: block;
     }
-
 
     button {
       font: inherit;
       cursor: pointer;
     }
 
-
     :target {
     scroll-margin-block: 5ex;
     }
 
-    h1, h2, h3{
-      color: ${PRIMARY_COLORS.darkBlue};
-    }
-
-    // Clamp values calculated using https://utopia.fyi/space/calculator from width 375px to 1440px
-    h1{
-      // 35px -> 56px (from 320px to 1440px)
-      font-size: clamp(2.1875rem, 1.8125rem + 1.875vi, 3.5rem);
-      font-weight: 400;
-    }
-    // 32px -> 38px
-    h2{
-      font-size: clamp(2rem, 1.868rem + 0.5634vi, 2.375rem);
-      font-weight: 400;
-    }
-    // 20px -> 22px
-    h3{
-      font-size: clamp(1.25rem, 1.206rem + 0.1878vi, 1.375rem);
-      font-weight: 400;
-    }
-    // 16px -> 18px
-    p{
-      font-size:clamp(0.875rem, 0.787rem + 0.3756vi, 1.125rem);
-      font-weight: 400;
-      color: ${NEUTRAL_COLORS.grayBlue};
-    }
 `;
 
 export default GlobalStyle;
-
-export const gridContainerStyle = css`
-  --max-content-width: 1035px;
-  display: grid;
-  grid-template-columns:
-    [full-width-start] minmax(1rem, auto) [content-start] minmax(
-      auto,
-      var(--max-content-width)
-    )
-    [content-end] minmax(1rem, auto)
-    [full-width-end];
-  > * {
-    grid-column: content;
-  }
-`;
