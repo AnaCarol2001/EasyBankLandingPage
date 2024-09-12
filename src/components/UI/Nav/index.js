@@ -1,9 +1,9 @@
 import Root from "./Root";
 import Item from "./Item";
 
-const Navigation = {
+const Nav = {
   Root,
   Item,
 };
 
-export default Navigation;
+export default Nav;
