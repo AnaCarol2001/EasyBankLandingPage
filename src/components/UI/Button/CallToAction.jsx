@@ -1,9 +1,9 @@
 import { LINEAR_GRADIENTS } from "src/global-styles";
 import styled from "styled-components";
 
-export const CallToActionBtnStyled = styled.button`
+const CallToActionStyled = styled.button`
   font-size: 0.875rem;
-  font-weight: 900;
+  font-weight: 400;
   border: none;
   padding: 0.8rem 1.8rem;
   border-radius: 2em;
@@ -21,3 +21,7 @@ export const CallToActionBtnStyled = styled.button`
     opacity: 0.5;
   }
 `;
+
+export default function CallToAction({ ...props }) {
+  return <CallToActionStyled {...props} />;
+}
