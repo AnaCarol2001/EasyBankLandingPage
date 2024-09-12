@@ -1,46 +1,19 @@
-import { useState } from "react";
 import useMediaQuery from "src/hooks/useMediaQuery";
-import Logo from "src/assets/images/Logo";
-import { CallToActionBtnStyled } from "src/components/Buttons/CallToAction";
-import { HeaderStyled, MenuBtnStyled } from "./Navbar.styled";
-import Navigation from "./Navigation";
+import NavbarMobile from "./NavbarMobile";
+import NavbarDesktop from "./NavbarDesktop";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width: 768px)");
+  const navLinks = [
+    { title: "Home", path: "#", current: true },
+    { title: "About", path: "#" },
+    { title: "Contact", path: "#" },
+    { title: "Blog", path: "#" },
+    { title: "Careers", path: "#" },
+  ];
   if (isMobile) {
-    return (
-      <HeaderStyled>
-        <div className="wrapper">
-          <Logo />
-          <div className="nav-container">
-            <Navigation isMenuOpen={isOpen} />
-            <MenuBtnStyled
-              type="button"
-              title={isOpen ? "Close" : "Menu"}
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
-              <div className="bar" aria-hidden="true"></div>
-              <div className="bar" aria-hidden="true"></div>
-              <div className="bar" aria-hidden="true"></div>
-            </MenuBtnStyled>
-          </div>
-        </div>
-      </HeaderStyled>
-    );
+    return <NavbarMobile links={navLinks} />;
   }
 
-  return (
-    <HeaderStyled>
-      <div className="wrapper">
-        <Logo />
-        <Navigation isMenuOpen={true} />
-        <CallToActionBtnStyled type="button">
-          Request Invite
-        </CallToActionBtnStyled>
-      </div>
-    </HeaderStyled>
-  );
+  return <NavbarDesktop links={navLinks} />;
 }
