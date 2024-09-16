@@ -78,6 +78,10 @@ const GlobalStyle = createGlobalStyle`
     scroll-margin-block: 5ex;
     }
 
+    p{
+      font-size: ${FontSizes[400]};
+    }
+
 `;
 
 export default GlobalStyle;
