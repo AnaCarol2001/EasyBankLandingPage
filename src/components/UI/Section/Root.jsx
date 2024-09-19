@@ -13,7 +13,7 @@ const RootStyled = styled.section`
 
   @media screen and (max-width: 550px) {
     gap: 3rem;
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
   }
 `;
 

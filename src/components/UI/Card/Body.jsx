@@ -9,4 +9,8 @@ const BodyStyled = styled.div`
   display: grid;
   gap: 0.5rem;
   text-align: left;
+
+  > * {
+    text-wrap: pretty;
+  }
 `;

@@ -5,7 +5,6 @@ const RootStyled = styled.div`
   gap: 1.5rem;
   max-width: 30ch;
   justify-items: center;
-  grid-template-rows: minmax(auto, 150px) repeat(1fr, auto);
   text-align: center;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -18,7 +17,14 @@ const RootStyled = styled.div`
 
   &:has(.card__body) {
     gap: 0.5rem;
-    max-width: 25ch;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 1023px) {
+    &:has(img + .card__body) {
+      max-width: 60ch;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 20ch;
+    }
   }
 
   @media screen and (min-width: 1024px) {

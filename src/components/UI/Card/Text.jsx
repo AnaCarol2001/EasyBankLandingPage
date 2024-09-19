@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FontSizes } from "src/global-styles";
 
-export default function Text({ children }) {
-  return <PStyled>{children}</PStyled>;
+export default function Text({ children, ...props }) {
+  return <PStyled {...props}>{children}</PStyled>;
 }
 
 const PStyled = styled.p`
-  font-size: ${FontSizes[400]};
+  font-size: ${({ $fontSize }) => ($fontSize ? $fontSize : FontSizes[400])};
 `;
 
 Text.propTypes = {

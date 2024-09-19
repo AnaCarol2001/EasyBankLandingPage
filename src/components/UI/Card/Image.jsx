@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 const ImgStyled = styled.img`
   width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
 `;
 
 export default function Image({ src }) {
