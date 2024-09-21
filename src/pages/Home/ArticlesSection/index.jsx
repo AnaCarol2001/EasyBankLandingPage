@@ -23,7 +23,7 @@ export default function ArticleSection() {
       <Section.Body $styles={articleContainer}>
         {articlesData.map((article, i) => (
           <Card.Root key={i} as="article">
-            <Card.Image src={article.image} />
+            <Card.Image src={article.image} alt="" />
             <Card.Body>
               <Card.SmallText>{article.author}</Card.SmallText>
               <Card.Title $fontSize={FontSizes[400]}>

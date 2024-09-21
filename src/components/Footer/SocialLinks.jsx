@@ -33,7 +33,7 @@ export default function SocialLinks() {
   return (
     <SocialLinksUlStyled>
       <li>
-        <a href="#">
+        <a href="#" aria-label="Facebook">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -48,7 +48,7 @@ export default function SocialLinks() {
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" aria-label="YouTube">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
@@ -63,7 +63,7 @@ export default function SocialLinks() {
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" aria-label="Twitter">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
@@ -78,7 +78,7 @@ export default function SocialLinks() {
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" aria-label="Pinterest">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -93,7 +93,7 @@ export default function SocialLinks() {
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" aria-label="Instagram">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"

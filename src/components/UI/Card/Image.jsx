@@ -8,8 +8,8 @@ const ImgStyled = styled.img`
   object-fit: cover;
 `;
 
-export default function Image({ src }) {
-  return <ImgStyled src={src} />;
+export default function Image({ src, ...props }) {
+  return <ImgStyled src={src} {...props} />;
 }
 
 Image.propTypes = {
