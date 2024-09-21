@@ -7,13 +7,13 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Link](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ### The challenge
 
@@ -25,6 +25,10 @@ Users should be able to:
 ### Screenshot
 
 <img src="./public/screenshot.png" style="max-width: 700px; width: 100%"/>
+
+### Link
+
+- Live site URL: [https://anacarol2001.github.io/EasyBankLandingPage/](https://anacarol2001.github.io/EasyBankLandingPage/)
 
 ## My process
 
