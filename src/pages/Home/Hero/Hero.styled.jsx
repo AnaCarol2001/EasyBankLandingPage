@@ -1,5 +1,7 @@
-import Images from "src/assets/images";
+import bgMobile from "src/assets/images/bg-mobile.svg";
 import styled from "styled-components";
+
+const bgImg = `"${bgMobile}"`;
 
 export const Container = styled.div`
   display: grid;
@@ -24,7 +26,7 @@ export const Container = styled.div`
 export const ImgContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: url(${Images.file.bgMobile}) no-repeat bottom 2rem left -5rem;
+  background: url(${bgImg}) no-repeat bottom 2rem left -5rem;
   background-size: cover;
 
   div {
